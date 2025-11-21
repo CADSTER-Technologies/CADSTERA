@@ -1,0 +1,60 @@
+2025-04-18T19:10:45.845893+0530 | INFO | 🚀 Starting API Server...
+2025-04-18T19:10:45.846739+0530 | INFO | ✅ Available Routes:
+2025-04-18T19:10:46.338585+0530 | INFO | 🚀 Starting API Server...
+2025-04-18T19:10:46.339526+0530 | INFO | ✅ Available Routes:
+2025-04-18T19:11:29.471661+0530 | INFO | 🚀 Starting API Server...
+2025-04-18T19:11:29.472560+0530 | INFO | ✅ Available Routes:
+2025-04-18T19:11:29.928635+0530 | INFO | 🚀 Starting API Server...
+2025-04-18T19:11:29.929425+0530 | INFO | ✅ Available Routes:
+2025-04-18T19:14:09.409832+0530 | INFO | 🚀 Starting API Server...
+2025-04-18T19:14:09.410648+0530 | INFO | ✅ Available Routes:
+2025-04-18T19:14:09.835364+0530 | INFO | 🚀 Starting API Server...
+2025-04-18T19:14:09.836107+0530 | INFO | ✅ Available Routes:
+2025-04-18T19:15:40.225585+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-04-18T19:15:40.228706+0530 | INFO | 127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes
+2025-04-18T19:15:42.704070+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-04-18T19:15:42.706203+0530 | INFO | 127.0.0.1 GET /DOCS Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes
+2025-04-18T19:17:33.020611+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:17:33", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:17:33.020982+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:17:33", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:18:10.359466+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:18:10", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:18:10.359859+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:18:10", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:18:10.800057+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:18:10", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:18:10.800374+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:18:10", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:21:27.092257+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-04-18 19:21:27", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-04-18T19:21:27.093073+0530 | INFO | 127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes
+{"time": "2025-04-18 19:21:27", "level": "INFO", "message": "127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes"}
+2025-04-18T19:21:28.030910+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-04-18 19:21:28", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-04-18T19:21:28.031439+0530 | INFO | 127.0.0.1 GET /docs Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes
+{"time": "2025-04-18 19:21:28", "level": "INFO", "message": "127.0.0.1 GET /docs Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes"}
+2025-04-18T19:22:29.571960+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:22:29", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:22:29.572354+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:22:29", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:22:29.996460+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:22:29", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:22:29.996764+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:22:29", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:24:02.035846+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-04-18 19:24:02", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-04-18T19:24:02.036418+0530 | INFO | 127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes
+{"time": "2025-04-18 19:24:02", "level": "INFO", "message": "127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes"}
+2025-04-18T19:27:00.516179+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:27:00", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:27:00.516573+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:27:00", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:27:00.947536+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-18 19:27:00", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-18T19:27:00.947858+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-18 19:27:00", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-18T19:27:09.827278+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-04-18 19:27:09", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-04-18T19:27:09.828127+0530 | INFO | 127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes
+{"time": "2025-04-18 19:27:09", "level": "INFO", "message": "127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15 | Length: 0 bytes"}

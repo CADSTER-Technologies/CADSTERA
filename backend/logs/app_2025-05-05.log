@@ -1,0 +1,44 @@
+2025-05-05T10:48:04.611065+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-05-05 10:48:04", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-05-05T10:48:04.620361+0530 | INFO | ✅ Available Routes:
+{"time": "2025-05-05 10:48:04", "level": "INFO", "message": "✅ Available Routes:"}
+2025-05-05T10:48:07.338215+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-05-05 10:48:07", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-05-05T10:48:07.340224+0530 | INFO | ✅ Available Routes:
+{"time": "2025-05-05 10:48:07", "level": "INFO", "message": "✅ Available Routes:"}
+2025-05-05T10:48:09.647858+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-05-05 10:48:09", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-05-05T10:48:09.650342+0530 | INFO | 127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:09", "level": "INFO", "message": "127.0.0.1 GET / Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:10.071655+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-05-05 10:48:10", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-05-05T10:48:10.071655+0530 | INFO | 127.0.0.1 GET /favicon.ico Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:10", "level": "INFO", "message": "127.0.0.1 GET /favicon.ico Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.290514+0530 | INFO | 127.0.0.1 GET /docs Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /docs Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.319278+0530 | INFO | 127.0.0.1 GET /docs/swagger-ui.css Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /docs/swagger-ui.css Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.332357+0530 | INFO | 127.0.0.1 GET /docs/index.css Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /docs/index.css Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.334909+0530 | INFO | 127.0.0.1 GET /docs/swagger-ui-bundle.js Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /docs/swagger-ui-bundle.js Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.335915+0530 | INFO | 127.0.0.1 GET /docs/swagger-ui-standalone-preset.js Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+2025-05-05T10:48:20.338433+0530 | INFO | 127.0.0.1 GET /docs/swagger-config.js Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /docs/swagger-ui-standalone-preset.js Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /docs/swagger-config.js Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.510950+0530 | INFO | Serving Swagger JSON
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "Serving Swagger JSON"}
+2025-05-05T10:48:20.512964+0530 | INFO | 127.0.0.1 GET /swagger.json Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /swagger.json Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.565420+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-05-05 10:48:20", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-05-05T10:48:20.565420+0530 | INFO | 127.0.0.1 GET /favicon-32x32.png Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /favicon-32x32.png Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:20.632467+0530 | WARNING | 404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+{"time": "2025-05-05 10:48:20", "level": "WARNING", "message": "404 Not Found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}
+2025-05-05T10:48:20.633466+0530 | INFO | 127.0.0.1 GET /favicon-16x16.png Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes
+{"time": "2025-05-05 10:48:20", "level": "INFO", "message": "127.0.0.1 GET /favicon-16x16.png Status: 404 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 0 bytes"}
+2025-05-05T10:48:46.720727+0530 | INFO | 127.0.0.1 POST /api/compare/downloadpdf Status: 400 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 179359 bytes
+{"time": "2025-05-05 10:48:46", "level": "INFO", "message": "127.0.0.1 POST /api/compare/downloadpdf Status: 400 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 179359 bytes"}
+2025-05-05T10:49:33.355860+0530 | INFO | 127.0.0.1 POST /api/compare/downloadpdf Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 179361 bytes
+{"time": "2025-05-05 10:49:33", "level": "INFO", "message": "127.0.0.1 POST /api/compare/downloadpdf Status: 200 | Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 | Length: 179361 bytes"}

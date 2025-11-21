@@ -1,0 +1,8 @@
+2025-04-25T10:12:44.323449+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-25 10:12:44", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-25T10:12:44.323952+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-25 10:12:44", "level": "INFO", "message": "✅ Available Routes:"}
+2025-04-25T10:12:44.889961+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-04-25 10:12:44", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-04-25T10:12:44.890368+0530 | INFO | ✅ Available Routes:
+{"time": "2025-04-25 10:12:44", "level": "INFO", "message": "✅ Available Routes:"}
