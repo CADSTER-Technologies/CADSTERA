@@ -5,7 +5,7 @@ services:
     repo: https://github.com/CADSTER-Technologies/CADSTERA
     branch: main
     buildCommand: cd frontend && npm install && npm run build
-    startCommand: cd frontend && npm run start
+    startCommand: cd frontend && npm run preview
     rootDir: frontend
   - type: web
     name: backend
