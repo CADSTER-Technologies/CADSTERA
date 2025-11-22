@@ -16,7 +16,8 @@ export default defineConfig(({ mode }) => ({
   preview: {
     host: true,
     port: 8080,
-    allowedHosts: [railwayDomain], // or ['*'] for all hosts
+    allowedHosts: ['*'],
+    // or ['*'] for all hosts
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
