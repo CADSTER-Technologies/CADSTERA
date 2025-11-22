@@ -69,10 +69,11 @@ const PDFComparer = () => {
             formData.append("file1", fileA);
             formData.append("file2", fileB);
 
-            const response = await fetch("/api/compare/downloadMissingPdf", {
-                method: "POST",
-                body: formData,
-            });
+            const response = await fetch(
+                "https://backend-production-2648.up.railway.app/compare/downloadMissingPdf",
+                { method: "POST", body: formData }
+            );
+
 
             if (!response.ok) {
                 const errorData = await response.json();
