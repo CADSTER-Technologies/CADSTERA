@@ -24,7 +24,7 @@ RUN python -m venv /opt/venv && \
 ENV PATH="/opt/venv/bin:$PATH"    
 
 # Copy application files
-COPY . .
+COPY backend/. .
 
 # Set environment variables
 ENV FLASK_ENV=production
@@ -34,4 +34,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 EXPOSE 8000
 
-CMD ["/opt/venv/bin/python", "main.py"]
+CMD ["/opt/venv/bin/python", "-m", "app.main"]
