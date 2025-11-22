@@ -34,4 +34,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 EXPOSE 8000
 
-CMD ["/opt/venv/bin/uwsgi", "--ini", "uwsgi.ini"]
+CMD ["/opt/venv/bin/python", "main.py"]
