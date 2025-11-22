@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   preview: {
     host: true,
     port: 8080,
-    allowedHosts: ['*'],
+    allowedHosts: ['frontend-production-aeb1.up.railway.app', '*'],
     // or ['*'] for all hosts
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
