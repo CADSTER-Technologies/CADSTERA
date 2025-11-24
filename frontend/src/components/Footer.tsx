@@ -70,7 +70,7 @@ export const Footer = () => {
                 className="text-primary-foreground/70 hover:text-primary transition-colors text-sm flex items-center gap-2"
               >
                 <Mail size={16} />
-                contact@cadster.com
+                services@cadster.in
               </a>
             </motion.div>
           </motion.div>
