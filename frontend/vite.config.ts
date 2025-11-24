@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   preview: {
     host: true,
     port: 8080,
-    allowedHosts: ['frontend-production-aeb1.up.railway.app', '*'],
+    allowedHosts: ['frontend-production-aeb1.up.railway.app', 'www.cadster.in', 'cadster.in', '*'],
     // or ['*'] for all hosts
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),

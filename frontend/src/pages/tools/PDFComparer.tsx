@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import { FileUp, FileDown, CheckCircle2, AlertCircle } from "lucide-react";
 import { saveAs } from "file-saver";
 
-const PDFComparer = () => {
+const PDFComparer: React.FC = () => {
     const [fileA, setFileA] = useState<File | null>(null);
     const [fileB, setFileB] = useState<File | null>(null);
     const [result, setResult] = useState<string | null>(null);
@@ -21,30 +21,20 @@ const PDFComparer = () => {
         const file = e.target.files?.[0] || null;
         setFileA(file);
         setErrorA(false);
-        if (file) {
-            setUploadStatusA("✅ Upload A file uploaded successfully!");
-        } else {
-            setUploadStatusA(null);
-        }
+        setUploadStatusA(file ? "✅ Upload A file uploaded successfully!" : null);
     };
 
     const handleFileBUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0] || null;
         setFileB(file);
         setErrorB(false);
-        if (file) {
-            setUploadStatusB("✅ Upload B file uploaded successfully!");
-        } else {
-            setUploadStatusB(null);
-        }
+        setUploadStatusB(file ? "✅ Upload B file uploaded successfully!" : null);
     };
 
     const comparePDF = async () => {
-        // Reset errors
         setErrorA(false);
         setErrorB(false);
 
-        // Check which files are missing
         if (!fileA && !fileB) {
             setErrorA(true);
             setErrorB(true);
@@ -73,7 +63,6 @@ const PDFComparer = () => {
                 "https://backend-production-2648.up.railway.app/api/compare/downloadMissingPdf",
                 { method: "POST", body: formData }
             );
-
 
             if (!response.ok) {
                 const errorData = await response.json();
@@ -106,7 +95,7 @@ const PDFComparer = () => {
 
     return (
         <div className="min-h-screen bg-black px-6 py-12 text-white">
-            {/* Header - Smaller */}
+            {/* Header */}
             <div className="flex items-center justify-center space-x-3 mb-8">
                 <div className="p-2 rounded-lg bg-[#e95c2a]/20 border border-[#e95c2a] shadow-[0_0_10px_#e95c2a] w-16 h-16 flex items-center justify-center">
                     <img src="/pdflogo.png" alt="PDF Logo" className="w-full h-full object-contain" />
@@ -116,7 +105,7 @@ const PDFComparer = () => {
                 </h1>
             </div>
 
-            {/* Compact Upload Cards */}
+            {/* PDF Upload Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                 {/* Upload PDF A */}
                 <div className={`bg-[#1a1a1a] p-5 rounded-xl border-2 ${errorA ? 'border-red-500/60 shadow-[0_0_20px_rgba(239,68,68,0.4)]' : 'border-[#e95c2a]/40 shadow-[0_0_15px_rgba(233,92,42,0.3)]'
@@ -133,7 +122,6 @@ const PDFComparer = () => {
                         />
                     </label>
 
-                    {/* Error Message */}
                     {errorA && !fileA && (
                         <div className="mt-3 flex items-center space-x-2 text-red-400 bg-red-500/10 p-2 rounded-lg border border-red-500/30">
                             <AlertCircle size={16} />
@@ -141,14 +129,12 @@ const PDFComparer = () => {
                         </div>
                     )}
 
-                    {/* Success Message */}
                     {uploadStatusA && (
                         <div className="mt-3 space-y-2">
                             <div className="flex items-center space-x-2 text-green-400">
                                 <CheckCircle2 size={16} />
                                 <p className="text-xs font-medium">{uploadStatusA}</p>
                             </div>
-                            {/* Filename */}
                             {fileA && (
                                 <div className="bg-[#e95c2a]/10 p-2 rounded-lg border border-[#e95c2a]/30">
                                     <p className="text-xs text-[#e95c2a] font-medium truncate">
@@ -179,7 +165,6 @@ const PDFComparer = () => {
                         />
                     </label>
 
-                    {/* Error Message */}
                     {errorB && !fileB && (
                         <div className="mt-3 flex items-center space-x-2 text-red-400 bg-red-500/10 p-2 rounded-lg border border-red-500/30">
                             <AlertCircle size={16} />
@@ -187,14 +172,12 @@ const PDFComparer = () => {
                         </div>
                     )}
 
-                    {/* Success Message */}
                     {uploadStatusB && (
                         <div className="mt-3 space-y-2">
                             <div className="flex items-center space-x-2 text-green-400">
                                 <CheckCircle2 size={16} />
                                 <p className="text-xs font-medium">{uploadStatusB}</p>
                             </div>
-                            {/* Filename */}
                             {fileB && (
                                 <div className="bg-[#e95c2a]/10 p-2 rounded-lg border border-[#e95c2a]/30">
                                     <p className="text-xs text-[#e95c2a] font-medium truncate">
@@ -211,7 +194,7 @@ const PDFComparer = () => {
                 </div>
             </div>
 
-            {/* Compare Button - Visible on Load */}
+            {/* Compare Button */}
             <div className="mt-8 flex justify-center">
                 <button
                     onClick={comparePDF}
