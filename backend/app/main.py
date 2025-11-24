@@ -100,7 +100,7 @@ class API:
         logger.info("✅ Available Routes:")
         for rule in self.app.url_map.iter_rules():
             print(f" - {rule}")
-        self.app.run(host="0.0.0.0", port=8000, debug=True)
+        self.app.run(host="0.0.0.0", port=8000, debug=False, use_reloader=False)
 
 api = API()
 if __name__ == "__main__":

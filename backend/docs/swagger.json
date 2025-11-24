@@ -5,7 +5,7 @@
     "description": "API to compare two PDF files and highlight differences.",
     "version": "1.0.0"
   },
-  "host": "127.0.0.1:5000",
+  "host": "backend-production-2648.up.railway.app" ,
   "schemes": [
     "http",
     "https"
