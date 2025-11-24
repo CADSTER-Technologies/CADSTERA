@@ -12,7 +12,6 @@ from middleware import (
     block_bad_user_agents,
     block_suspicious_input,
     request_sanitizer
-
 )
 from api.routes import all_routes
 from flask_cors import CORS
@@ -20,18 +19,13 @@ from flask_cors import CORS
 class API:
     def __init__(self):
         """Initialize Flask app and register routes."""
-        
         BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-    
         template_path = os.path.join(BASE_DIR, "templates")
 
         self.app = Flask(__name__, template_folder=template_path)
 
-        print("📦 Base Directory:", BASE_DIR)  # Debug line
+        print("📦 Base Directory:", BASE_DIR)
         register_error_handlers(self.app)
-
-        # Initialize the database
-        # init_db(self.app) # Initialize the database connection
 
         # Setup secure CORS
         CORS(self.app, resources={
@@ -42,12 +36,14 @@ class API:
             },
             r"/docs/*": {
                 "origins": "*",
-                 "methods": ["GET", "POST", "PUT", "DELETE"],
-                 "allow_headers": ["Content-Type"]
-                },
-            r"/swagger.json": {"origins": "*",
-                                 "methods": ["GET", "POST", "PUT", "DELETE"],
-                 "allow_headers": ["Content-Type"]}
+                "methods": ["GET", "POST", "PUT", "DELETE"],
+                "allow_headers": ["Content-Type"]
+            },
+            r"/swagger.json": {
+                "origins": "*",
+                "methods": ["GET", "POST", "PUT", "DELETE"],
+                "allow_headers": ["Content-Type"]
+            }
         })
 
         # Middleware
@@ -64,7 +60,6 @@ class API:
             api_bp.register_blueprint(route)
             print(f" - {route.endpoint}: {route}")
         self.app.register_blueprint(api_bp)
-                # === ADD THIS BLOCK BELOW ===
         print("✅ Live Registered Routes:")
         for rule in self.app.url_map.iter_rules():
             print(f"[API ROUTE] {rule}")
@@ -78,7 +73,6 @@ class API:
         self.app.register_error_handler(Exception, self.handle_exception)
 
     def setup_swagger_routes(self, base_dir):
-
         """Setup Swagger documentation routes."""
         docs_dir = os.path.abspath(os.path.join(base_dir, "..", "docs"))
         swagger_ui_dir = os.path.join(base_dir, "static", "swagger-ui")
@@ -106,10 +100,10 @@ class API:
         logger.info("✅ Available Routes:")
         for rule in self.app.url_map.iter_rules():
             print(f" - {rule}")
-        self.app.run(debug=True)
-        
+        self.app.run(host="0.0.0.0", port=8000, debug=True)
+
 api = API()
 if __name__ == "__main__":
-    api.run(host="0.0.0.0", port=8000, debug=True)
+    api.run()
 
 app = api.app
