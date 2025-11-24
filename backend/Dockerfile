@@ -33,6 +33,6 @@ ENV API_PORT=8000
 ENV PATH="/opt/venv/bin:$PATH"
 
 EXPOSE 8000
+ENV PYTHONPATH=/compare
 
 CMD ["/opt/venv/bin/python", "app/main.py"]
-    
