@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-
+ 
 // Import lucide icons
 import {
   Menu,
@@ -27,17 +27,17 @@ import {
   Settings2,       // ✅ NEW: For Configurator
   LayoutTemplate,  // ✅ NEW: For Templates
 } from "lucide-react";
-
+ 
 interface NavItem {
   name: string;
   path: string;
   icon: React.ElementType;
   submenu?: NavItem[];
 }
-
+ 
 const navLinks: NavItem[] = [
   { name: "Home", path: "/", icon: Home },
-
+ 
   {
     name: "Products",
     path: "/products",
@@ -46,13 +46,13 @@ const navLinks: NavItem[] = [
       { name: "Converter", path: "/products/converter", icon: Box },
       { name: "Comparer", path: "/products/comparer", icon: GitCompare },
       { name: "Viewer", path: "/products/viewer", icon: Eye },
-      { name: "Pyrotwin", path: "/products/pyrotwin", icon: Orbit },
+      { name: "Fireworks Twiner", path: "/products/Fireworks Twiner", icon: Orbit },
       { name: "Data Extractor", path: "/products/data-extractor", icon: Database },      // ✅ NEW
       { name: "Configurator", path: "/products/configurator", icon: Settings2 },          // ✅ NEW
-      { name: "Templates", path: "/products/templates", icon: LayoutTemplate },           // ✅ NEW
+      { name: "Templator", path: "/products/templator", icon: LayoutTemplate },           // ✅ NEW
     ],
   },
-
+ 
   {
     name: "Projects",
     path: "/projects",
@@ -65,8 +65,8 @@ const navLinks: NavItem[] = [
       { name: "Code Re-vamp", path: "/projects/code-revamp", icon: Factory },
     ],
   },
-
-
+ 
+ 
   {
     name: "Solutions",
     path: "/solutions",
@@ -80,11 +80,11 @@ const navLinks: NavItem[] = [
       { name: "Team Collaboration", path: "/solutions/team-collaboration", icon: Users },
     ],
   },
-
+ 
   { name: "About", path: "/about", icon: Info },
   { name: "Contact", path: "/contact", icon: Contact },
 ];
-
+ 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -92,20 +92,20 @@ export const Navigation = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<any>(null);
   const location = useLocation();
-
+ 
   // Close submenu when page changes
   useEffect(() => {
     setOpenDropdown(null);
   }, [location.pathname]);
-
+ 
   // Handle scroll direction and visibility
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
+ 
       // Check if scrolled past 50px
       setIsScrolled(currentScrollY > 50);
-
+ 
       // Show/hide based on scroll direction
       if (currentScrollY < 10) {
         // Always show at top
@@ -117,24 +117,24 @@ export const Navigation = () => {
         // Scrolling up - show
         setIsVisible(true);
       }
-
+ 
       setLastScrollY(currentScrollY);
     };
-
+ 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
+ 
   const handleMouseEnter = (name: string) => {
     if (hoverTimeout) clearTimeout(hoverTimeout);
     setOpenDropdown(name);
   };
-
+ 
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => setOpenDropdown(null), 250);
     setHoverTimeout(timeout);
   };
-
+ 
   return (
     <motion.nav
       initial={{ y: 0 }}
@@ -153,7 +153,7 @@ export const Navigation = () => {
         >
           CADSTER
         </Link>
-
+ 
         {/* DESKTOP MENU */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
@@ -172,7 +172,7 @@ export const Navigation = () => {
                 <link.icon size={18} className="text-[#e95c2a] group-hover:text-[#ff6f3d] transition-colors" />
                 {link.name}
               </Link>
-
+ 
               {/* SUBMENU */}
               {link.submenu && openDropdown === link.name && (
                 <motion.div
@@ -191,7 +191,7 @@ export const Navigation = () => {
                       to={item.path}
                       className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
                                  text-white transition-all duration-200 hover:bg-[#e95c2a]/10
-                                 hover:text-[#e95c2a] hover:translate-x-1 
+                                 hover:text-[#e95c2a] hover:translate-x-1
                                  hover:shadow-[0_0_10px_rgba(233,92,42,0.3)]"
                     >
                       <item.icon size={16} className="text-[#e95c2a]" />
@@ -203,7 +203,7 @@ export const Navigation = () => {
             </div>
           ))}
         </div>
-
+ 
         {/* MOBILE MENU */}
         <div className="md:hidden">
           <Menu size={30} className="text-[#e95c2a] hover:text-[#ff6f3d] cursor-pointer transition-colors" />

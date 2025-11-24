@@ -94,7 +94,7 @@ export default function Pyrotwin() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-extrabold leading-tight text-[#FF8A00] drop-shadow-[0_0_40px_#FF6A00]"
           >
-            PyroTwin —  Professional Engineers
+            Fireworks Twiner Tool
           </motion.h1>
 
           <p className="mt-6 text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">

@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState, FormEvent } from "react";
 import { sendContactEmail } from '@/services/emailService'; // ← ADD THIS IMPORT
-
+ 
 const Contact = () => {
   // Form state
   const [formData, setFormData] = useState({
@@ -18,13 +18,13 @@ const Contact = () => {
     message: "",
     website: "", // honeypot for spam protection
   });
-
+ 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error";
     message: string;
   } | null>(null);
-
+ 
   // Handle input changes
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,13 +34,13 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     }));
   };
-
+ 
   // ✅ UPDATED: Handle form submission with EmailJS
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
+ 
     try {
       // Honeypot check - if website field is filled, it's a bot
       if (formData.website) {
@@ -51,12 +51,12 @@ const Contact = () => {
         setIsSubmitting(false);
         return;
       }
-
+ 
       // Combine first and last name
       const fullName = `${formData.firstName} ${formData.lastName}`.trim();
-
+ 
       console.log("📤 Sending email via EmailJS...");
-
+ 
       // Send email via EmailJS
       const result = await sendContactEmail({
         name: fullName,
@@ -64,13 +64,13 @@ const Contact = () => {
         company: formData.company,
         message: formData.message,
       });
-
+ 
       if (result.success) {
         setSubmitStatus({
           type: "success",
           message: result.message,
         });
-
+ 
         // Reset form
         setFormData({
           firstName: "",
@@ -80,7 +80,7 @@ const Contact = () => {
           message: "",
           website: "",
         });
-
+ 
         // Clear success message after 5 seconds
         setTimeout(() => setSubmitStatus(null), 5000);
       } else {
@@ -99,15 +99,15 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
+ 
   return (
     <div className="min-h-screen">
       <Navigation />
-
+ 
       {/* Hero */}
       <section className="pt-32 pb-20 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e1e1e_1px,transparent_1px),linear-gradient(to_bottom,#1e1e1e_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10" />
-
+ 
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -123,7 +123,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-
+ 
       {/* Contact Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
@@ -141,7 +141,7 @@ const Contact = () => {
                   Have questions? We're here to help. Reach out to our team and we'll get back to you as soon as possible.
                 </p>
               </div>
-
+ 
               <div className="space-y-6">
                 {[
                   {
@@ -190,7 +190,7 @@ const Contact = () => {
                 ))}
               </div>
             </motion.div>
-
+ 
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -209,7 +209,7 @@ const Contact = () => {
                   tabIndex={-1}
                   autoComplete="off"
                 />
-
+ 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">First Name *</label>
@@ -234,7 +234,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-
+ 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Email *</label>
                   <Input
@@ -247,7 +247,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-
+ 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Company</label>
                   <Input
@@ -258,7 +258,7 @@ const Contact = () => {
                     className="bg-background/50"
                   />
                 </div>
-
+ 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Message *</label>
                   <Textarea
@@ -271,7 +271,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-
+ 
                 {/* Status Message */}
                 {submitStatus && (
                   <motion.div
@@ -286,7 +286,7 @@ const Contact = () => {
                     <p className="text-sm font-medium">{submitStatus.message}</p>
                   </motion.div>
                 )}
-
+ 
                 <Button
                   type="submit"
                   size="lg"
@@ -300,10 +300,10 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
+ 
       <Footer />
     </div>
   );
 };
-
+ 
 export default Contact;
