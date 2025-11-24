@@ -34,4 +34,5 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 EXPOSE 8000
 
-CMD ["/opt/venv/bin/python", "-m", "app.main"]
+CMD ["/opt/venv/bin/python", "app/main.py"]
+    

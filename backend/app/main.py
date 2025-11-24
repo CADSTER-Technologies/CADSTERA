@@ -2,7 +2,7 @@ import os
 import traceback
 from flask import Blueprint, Flask, jsonify, request, send_from_directory
 from loguru import logger
-from commons.error_handlers import register_error_handlers
+from app.commons.error_handlers import register_error_handlers
 from core import generate_swagger
 from middleware import (
     sanitize_input,
