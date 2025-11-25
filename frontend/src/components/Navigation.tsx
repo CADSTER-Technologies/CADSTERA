@@ -47,7 +47,7 @@ const navLinks: NavItem[] = [
       { name: "Comparer", path: "/products/comparer", icon: GitCompare },
       { name: "Viewer", path: "/products/viewer", icon: Eye },
       { name: "Fireworks Twiner", path: "/products/Fireworks Twiner", icon: Orbit },
-      { name: "Data Extractor", path: "/products/data-extractor", icon: Database },      // ✅ NEW
+      { name: "Extractor", path: "/products/extractor", icon: Database },      // ✅ NEW
       { name: "Configurator", path: "/products/configurator", icon: Settings2 },          // ✅ NEW
       { name: "Templator", path: "/products/templator", icon: LayoutTemplate },           // ✅ NEW
     ],

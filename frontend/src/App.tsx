@@ -27,7 +27,7 @@ import Converter from "./pages/products/Converter";
 import Comparer from "./pages/products/Comparer";
 import Viewer from "./pages/products/Viewer";
 import FireworksTwiner from "./pages/products/Fireworks Twiner";
-import DataExtractor from "./pages/products/DataExtractor";
+import Extractor from "./pages/products/Extractor";
 import Templator from "./pages/products/Templator";
 import Configurator from "./pages/products/Configurator";
  
@@ -77,7 +77,7 @@ const App = () => (
             <Route path="/products/comparer" element={<Comparer />} />
             <Route path="/products/viewer" element={<Viewer />} />
             <Route path="/products/Fireworks Twiner" element={<FireworksTwiner />} />
-            <Route path="/products/data-extractor" element={<DataExtractor />} />
+            <Route path="/products/Extractor" element={<Extractor />} />
             <Route path="/products/templator" element={<Templator/>} />
             <Route path="/products/configurator" element={<Configurator />} />
            

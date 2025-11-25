@@ -19,6 +19,7 @@ const Products = () => {
         "Geometry Validation",
         "Metadata Preservation",
       ],
+      videoSrc: "/Converter.mp4", // Add your video path here
     },
     {
       icon: GitCompare,
@@ -33,6 +34,7 @@ const Products = () => {
         "Version Control Integration",
         "Batch File Comparison",
       ],
+      videoSrc: "/PDF.mp4", // Add your video path here
     },
     {
       icon: Eye,
@@ -47,11 +49,12 @@ const Products = () => {
         "Collaboration Features",
         "Embeddable Anywhere",
       ],
+      videoSrc: "/Viewer.mp4", // Add your video path here
     },
     {
       icon: Layers,
-      name: "Pyrotwin",
-      slug: "pyrotwin",
+      name: "Fireworks Twiner",
+      slug: "Fireworks Twiner",
       tagline: "Digital Twin Platform",
       description:
         "Create real-time digital twins of physical assets with automated synchronization, IoT integration, and predictive maintenance capabilities for smart manufacturing and building management.",
@@ -61,11 +64,12 @@ const Products = () => {
         "Performance Simulation",
         "Predictive Maintenance Alerts",
       ],
+      videoSrc: "/Fireworks Twiner.mp4", // Add your video path here
     },
     {
       icon: Database,
-      name: "Data Extractor",
-      slug: "data-extractor",
+      name: "Extractor",
+      slug: "extractor",
       tagline: "Intelligent CAD Data Mining",
       description:
         "Extract metadata, parameters, and properties from CAD files automatically. Generate comprehensive reports, BOMs, and analytics from your design data with custom field mapping.",
@@ -75,6 +79,7 @@ const Products = () => {
         "Batch File Processing",
         "Excel/CSV Export",
       ],
+      videoSrc: "/pdf Extractor.mp4", // Add your video path here
     },
     {
       icon: Settings2,
@@ -89,11 +94,12 @@ const Products = () => {
         "Rule-Based Validation",
         "Dynamic Pricing Engine",
       ],
+      videoSrc: "/Configurator.mp4", // Add your video path here
     },
     {
       icon: LayoutTemplate,
-      name: "Templates",
-      slug: "templates",
+      name: "Templator",
+      slug: "templator",
       tagline: "Smart Design Templates",
       description:
         "Access 200+ pre-built parametric templates for common design tasks. Accelerate workflows with industry-standard templates that adapt to your requirements and enable team sharing.",
@@ -103,6 +109,7 @@ const Products = () => {
         "Industry-Specific Libraries",
         "Team Template Sharing",
       ],
+      videoSrc: "/Templator.mp4", // Add your video path here
     },
   ];
 
@@ -142,27 +149,45 @@ const Products = () => {
                 className="group"
               >
                 <Link to={`/products/${product.slug}`}>
-                  <div className="glass-effect p-10 rounded-3xl h-full hover:shadow-[0_0_20px_#FF6A00] transition-all duration-300 cursor-pointer border border-[#FF6A00]/40">
-                    <div className="w-16 h-16 bg-[#FF6A00]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#FF6A00]/20 transition-colors">
-                      <product.icon className="text-[#FF8A00]" size={32} />
+                  <div className="glass-effect p-10 rounded-3xl h-full hover:shadow-[0_0_20px_#FF6A00] transition-all duration-300 cursor-pointer border border-[#FF6A00]/40 relative overflow-hidden">
+                    
+                    {/* Video Background */}
+                    <div className="absolute inset-0 w-full h-full overflow-hidden rounded-3xl">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-60"
+                      >
+                        <source src={product.videoSrc} type="video/mp4" />
+                      </video>
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70"></div>
                     </div>
 
-                    <h3 className="text-3xl font-bold mb-2 text-[#FFB000]">{product.name}</h3>
-                    <p className="text-[#FF8A00] mb-4 font-medium">{product.tagline}</p>
-                    <p className="text-muted-foreground mb-8 leading-relaxed">{product.description}</p>
+                    {/* Foreground Content */}
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-[#FF6A00]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#FF6A00]/20 transition-colors backdrop-blur-sm border border-[#FF8A00]/30">
+                        <product.icon className="text-[#FF8A00]" size={32} />
+                      </div>
 
-                    <div className="space-y-3 mb-8">
-                      {product.features.map((feature) => (
-                        <div key={feature} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full" />
-                          <span className="text-sm">{feature}</span>
-                        </div>
-                      ))}
+                      <h3 className="text-3xl font-bold mb-2 text-[#FFB000] drop-shadow-lg">{product.name}</h3>
+                      <p className="text-[#FF8A00] mb-4 font-medium drop-shadow-md">{product.tagline}</p>
+                      <p className="text-white/90 mb-8 leading-relaxed drop-shadow-md">{product.description}</p>
+
+                      <div className="space-y-3 mb-8">
+                        {product.features.map((feature) => (
+                          <div key={feature} className="flex items-center space-x-2">
+                            <div className="w-1.5 h-1.5 bg-[#FF8A00] rounded-full shadow-[0_0_10px_#FF8A00]" />
+                            <span className="text-sm text-white/80 drop-shadow-md">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <Button className="w-full bg-[#FF6A00] hover:bg-[#FF8A00] text-black font-semibold">
+                        Learn More
+                      </Button>
                     </div>
-
-                    <Button className="w-full bg-[#FF6A00] hover:bg-[#FF8A00] text-black font-semibold">
-                      Learn More
-                    </Button>
                   </div>
                 </Link>
               </motion.div>

@@ -105,7 +105,7 @@ export const Footer = () => {
                 { name: "Converter", path: "/products/converter" },
                 { name: "Viewer", path: "/products/viewer" },
                 { name: "Fireworks Twiner", path: "/products/Fireworks Twiner" },
-                { name: "Data Extractor", path: "/products/data-extractor" },
+                { name: "Extractor", path: "/products/extractor" },
                 { name: "Configurator", path: "/products/configurator" },
                 { name: "Templator", path: "/products/templator" },
               ].map((product, index) => (
