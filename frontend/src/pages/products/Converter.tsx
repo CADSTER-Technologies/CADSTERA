@@ -67,7 +67,7 @@ const PDFToolsSection = () => {
               </div>
 
               <Link
-                to="/tools/Configurator3D"
+                to="/tools/Converters"
                 className="inline-flex items-center gap-2 bg-[#FF8A00] text-black px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-[#FFB000] transition"
               >
                 Open
