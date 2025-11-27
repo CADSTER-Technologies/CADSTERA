@@ -1,91 +1,86 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import React from "react";
 import { motion } from "framer-motion";
-import { LayoutTemplate, FileCog, BookMarked, CopyCheck, FileText, FileSpreadsheet } from "lucide-react";
+import { ArrowLeftRight, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Templates = () => {
+
+/* -----------------------------------------
+   UNIVERSAL HOVER CARD WRAPPER
+------------------------------------------*/
+const HoverCard = ({ children }) => (
+  <motion.div
+    whileHover={{ scale: 1.04 }}
+    transition={{ duration: 0.25 }}
+    className="relative overflow-hidden bg-[#0e0e0e] border border-white/10 rounded-2xl p-4 shadow-lg"
+  >
+    {children}
+  </motion.div>
+);
+
+
+/* -----------------------------------------
+   MAIN COMPONENT
+------------------------------------------*/
+const PDFToolsSection = () => {
   return (
-    <div className="min-h-screen bg-black">
-      <Navigation />
+    <section className="w-full py-20 px-6 bg-[#050505] text-white">
+      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-secondary relative overflow-hidden">
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary-foreground">
-              Intelligent <span className="gradient-text">Templates</span>
-            </h1>
-            <p className="text-xl text-primary-foreground/80">
-              Dynamically managed engineering and document templates integrated for CAD, PLM, and standards compliance
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Technical Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Icons Block */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center space-y-8"
-            >
-              <LayoutTemplate size={120} className="text-primary/40 mb-6" />
-              <div className="flex flex-wrap gap-6">
-                <FileCog size={48} className="text-orange-400" />
-                <BookMarked size={48} className="text-blue-400" />
-                <CopyCheck size={48} className="text-teal-400" />
-                <FileText size={48} className="text-pink-400" />
-                <FileSpreadsheet size={48} className="text-emerald-400" />
-              </div>
-            </motion.div>
-            {/* Content Block */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-8"
-            >
-              <h2 className="text-3xl font-bold mb-4 text-primary-foreground">
-                Centralized Template Management System
-              </h2>
-              <ul className="list-disc pl-6 text-lg text-muted-foreground space-y-4">
-                <li>
-                  <strong>CAD/BIM Drawing Templates:</strong> DWG, DXF, and IFC-based starter kits for compliant drawing sets.
-                </li>
-                <li>
-                  <strong>Advanced Document Automation:</strong> Generate Word, Excel, and PDF templates with custom branding, logic, and revision protocols.
-                </li>
-                <li>
-                  <strong>Template Version Control:</strong> Git-style change logs, rollback, diff, and secure sharing for all engineering teams.
-                </li>
-                <li>
-                  <strong>Industry Adaptation:</strong> Used by firms in electrical, biomed, mechanical, AEC, and power domains to standardize project deliverables.
-                </li>
-                <li>
-                  <strong>API Integration & Cloud Storage:</strong> Access templates directly in SaaS, web, and desktop workflows, synced with S3, Google Drive, and SharePoint.
-                </li>
-              </ul>
-              <div className="glass-effect p-6 rounded-2xl inline-block mt-6">
-                <p className="text-sm text-muted-foreground mb-1">Real-World Impact</p>
-                <p className="text-2xl font-bold gradient-text">
-                  60% reduction in documentation errors for regulated industries
-                </p>
-              </div>
-            </motion.div>
+        {/* Section Title with Icon - CENTERED */}
+        <div className="flex items-center justify-center gap-4 mb-10 w-full">
+          <div className="group p-3 rounded-xl bg-[#FF8A00]/20 border border-[#FF8A00] shadow-[0_0_15px_#FF6A00] w-16 h-16 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-[0_0_25px_#FF6A00] cursor-pointer">
+            <ArrowLeftRight className="w-12 h-12 text-[#FF8A00] transition-transform duration-300 group-hover:scale-110" />
           </div>
+          <h2 className="text-4xl font-bold text-[#FF8A00] drop-shadow-[0_0_20px_#FF6A00]">
+            Templator TOOL
+          </h2>
         </div>
-      </section>
-      <Footer />
-    </div>
+
+
+        {/* Cards Grid - CENTERED */}
+        <div className="flex justify-center items-center w-full">
+          <HoverCard>
+            {/* Background Video */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden rounded-2xl">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover opacity-70"
+              >
+                <source src="/Templator.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60"></div>
+            </div>
+
+            {/* Foreground Content - CENTERED */}
+            <div className="relative z-10 w-60 h-60 flex flex-col justify-between items-center text-center p-3">
+              {/* Logo at TOP */}
+              <div className="flex flex-col items-center">
+                <div className="rounded-xl bg-black/40 border border-[#FF8A00]/50 mb-2 backdrop-blur-sm w-20 h-20 flex items-center justify-center">
+                  <img src="/logos/Templator.png" alt="Templator Icon" className="w-full h-full object-contain" />
+                </div>
+                <h4 className="text-lg font-semibold text-[#FFB000] drop-shadow-md">
+                  Templates
+                </h4>
+              </div>
+
+              {/* Open Button */}
+              <Link
+                to="/tools/templators"
+                className="inline-flex items-center gap-2 bg-[#FF8A00] text-black px-4 py-1.5 rounded-lg text-xs font-semibold hover:bg-[#FFB000] transition"
+              >
+                Open
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </HoverCard>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default Templates;
+
+export default PDFToolsSection;
