@@ -66,7 +66,7 @@ const DataExtractor: React.FC = () => {
 
           {/* Button */}
           <Link
-            to="/tools/PDFText"
+            to="/tools/DataExtractor"
             className="inline-flex items-center gap-2 bg-[#FF8A00] text-black px-5 py-2 rounded-lg text-sm font-semibold hover:bg-[#FFB000] transition"
           >
             Open
