@@ -32,7 +32,7 @@ const PDFToolsSection = () => {
             <Settings className="w-12 h-12 text-[#FF8A00] transition-transform duration-300 group-hover:rotate-90 group-hover:scale-110" />
           </div>
           <h2 className="text-4xl font-bold text-[#FF8A00] drop-shadow-[0_0_20px_#FF6A00]">
-            Configurator TOOL
+            Converter
           </h2>
         </div>
 
@@ -49,7 +49,7 @@ const PDFToolsSection = () => {
                 playsInline
                 className="w-full h-full object-cover opacity-70"
               >
-                <source src="/Configurator.mp4" type="video/mp4" />
+                <source src="/Converterr.mp4" type="video/mp4" />
               </video>
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60"></div>
             </div>
@@ -59,10 +59,10 @@ const PDFToolsSection = () => {
               {/* Logo at TOP */}
               <div className="flex flex-col items-center">
                 <div className="rounded-xl bg-black/40 border border-[#FF8A00]/50 mb-2 backdrop-blur-sm w-20 h-20 flex items-center justify-center">
-                  <img src="/logos/Configurator.png" alt="Configurator Icon" className="w-full h-full object-contain" />
+                  <img src="/logos/Converter.png" alt="Configurator Icon" className="w-full h-full object-contain" />
                 </div>
                 <h4 className="text-lg font-semibold text-[#FFB000] drop-shadow-md">
-                  3D Configurator
+                  Converter
                 </h4>
               </div>
 
