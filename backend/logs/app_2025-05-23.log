@@ -1,0 +1,10 @@
+2025-05-23T15:31:32.912305+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-05-23 15:31:32", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-05-23T15:31:32.914305+0530 | INFO | ✅ Available Routes:
+{"time": "2025-05-23 15:31:32", "level": "INFO", "message": "✅ Available Routes:"}
+2025-05-23T15:31:33.725418+0530 | INFO | 🚀 Starting API Server...
+{"time": "2025-05-23 15:31:33", "level": "INFO", "message": "🚀 Starting API Server..."}
+2025-05-23T15:31:33.726420+0530 | INFO | ✅ Available Routes:
+{"time": "2025-05-23 15:31:33", "level": "INFO", "message": "✅ Available Routes:"}
+2025-05-23T15:31:48.452409+0530 | INFO | 127.0.0.1 POST /api/compare/downloadZipPdf Status: 200 | Agent: PostmanRuntime/7.44.0 | Length: 895798 bytes
+{"time": "2025-05-23 15:31:48", "level": "INFO", "message": "127.0.0.1 POST /api/compare/downloadZipPdf Status: 200 | Agent: PostmanRuntime/7.44.0 | Length: 895798 bytes"}

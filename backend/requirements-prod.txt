@@ -1,0 +1,15 @@
+asyncpg
+cryptography
+Fernet
+Flask
+flask-cors
+flask[async]
+loguru
+PyMuPDF
+PyPDF2
+waitress
+python-dotenv
+reportlab
+swagger-ui-py
+tabulate
+werkzeug
