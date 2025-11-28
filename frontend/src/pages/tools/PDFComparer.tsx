@@ -60,7 +60,7 @@ const PDFComparer: React.FC = () => {
             formData.append("file2", fileB);
 
             const response = await fetch(
-                "https://backend-production-2648.up.railway.app/api/compare/report",
+                "https://backend-production-2648.up.railway.app/api/compare/downloadMissingPdf",
                 { method: "POST", body: formData }
             );
 
