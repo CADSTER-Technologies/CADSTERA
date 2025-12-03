@@ -13,3 +13,4 @@ reportlab
 swagger-ui-py
 tabulate
 werkzeug
+resend

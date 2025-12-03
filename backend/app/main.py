@@ -27,7 +27,7 @@ class API:
         print("📦 Base Directory:", BASE_DIR)
         register_error_handlers(self.app)
         # ✅ FIXED CORS - Proper origins + indentation
-        frontend_origins = os.getenv("FRONTEND_ORIGINS", "https://www.cadster.in").split(",")
+        frontend_origins = os.getenv("FRONTEND_ORIGINS", "https://www.cadster.in, https://cadster.in, https://frontend-production-aeb1.up.railway.app").split(",")
         print(f"🌐 CORS Origins: {frontend_origins}")
         CORS(
             self.app,
