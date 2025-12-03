@@ -1,8 +1,3 @@
-import emailjs from '@emailjs/browser';
-
-// Replace with your actual Public Key from EmailJS
-emailjs.init('SxOVkv3P3YS_h6JG5');
-
 export interface ContactFormData {
   name: string;
   email: string;
@@ -10,33 +5,47 @@ export interface ContactFormData {
   message: string;
 }
 
+const BACKEND_URL = 'https://backend-production-2648.up.railway.app';
+
 export const sendContactEmail = async (
   data: ContactFormData
 ): Promise<{ success: boolean; message: string }> => {
   try {
-    console.log('📤 Sending email via EmailJS...');
+    console.log('📤 Sending email via Resend backend...');
 
-    const response = await emailjs.send(
-      'service_dtzp5cf',      // Replace with your Service ID
-      'template_d3jegxp',     // Replace with your Template ID
-      {
+    const response = await fetch(`${BACKEND_URL}/api/send-contact-email`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
         name: data.name,
-        from_email: data.email,
-        company: data.company || 'N/A',
+        email: data.email,
+        company: data.company || '',
         message: data.message,
-      }
-    );
+      }),
+    });
 
-    console.log('✅ Email sent successfully:', response);
-    return {
-      success: true,
-      message: 'Thanks! We will contact you soon.',
-    };
+    const result = await response.json();
+
+    if (result.success) {
+      console.log('✅ Email sent successfully');
+      return {
+        success: true,
+        message: 'Thank you for contacting us! We\'ll get back to you soon.',
+      };
+    } else {
+      console.error('❌ Email sending failed:', result.message);
+      return {
+        success: false,
+        message: result.message || 'Failed to send email. Please try again.',
+      };
+    }
   } catch (error: any) {
-    console.error('❌ Email sending failed:', error);
+    console.error('❌ Email sending error:', error);
     return {
       success: false,
-      message: 'Failed to send email. Please try again.',
+      message: 'Network error. Please check your connection and try again.',
     };
   }
 };
