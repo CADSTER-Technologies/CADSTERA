@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Box, GitCompare, Eye, Layers, Database, Settings2, LayoutTemplate } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ProtectedProductLink } from "@/components/ProtectedProductLink";
 
 const Products = () => {
   const products = [
@@ -148,9 +149,8 @@ const Products = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
-                <Link to={`/products/${product.slug}`}>
+                <ProtectedProductLink to={`/products/${product.slug}`}>
                   <div className="glass-effect p-10 rounded-3xl h-full hover:shadow-[0_0_20px_#FF6A00] transition-all duration-300 cursor-pointer border border-[#FF6A00]/40 relative overflow-hidden">
-                    
                     {/* Video Background */}
                     <div className="absolute inset-0 w-full h-full overflow-hidden rounded-3xl">
                       <video
@@ -189,7 +189,7 @@ const Products = () => {
                       </Button>
                     </div>
                   </div>
-                </Link>
+                </ProtectedProductLink>
               </motion.div>
             ))}
           </div>
