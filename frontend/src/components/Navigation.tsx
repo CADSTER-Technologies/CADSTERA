@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ProtectedProductLink } from "@/components/ProtectedProductLink";
+import { useAuth } from "@/context/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "@/config/firebase";
+import { Button } from "@/components/ui/button";
  
 // Import lucide icons
 import {
@@ -23,9 +28,11 @@ import {
   Users,
   Info,
   Contact,
-  Database,        // ✅ NEW: For Data Extractor
-  Settings2,       // ✅ NEW: For Configurator
-  LayoutTemplate,  // ✅ NEW: For Templates
+  Database,
+  Settings2,
+  LayoutTemplate,
+  LogOut,
+  User,
 } from "lucide-react";
  
 interface NavItem {
@@ -47,12 +54,12 @@ const navLinks: NavItem[] = [
       { name: "Comparer", path: "/products/comparer", icon: GitCompare },
       { name: "Viewer", path: "/products/viewer", icon: Eye },
       { name: "Fireworks Twiner", path: "/products/Fireworks Twiner", icon: Orbit },
-      { name: "Extractor", path: "/products/extractor", icon: Database },      // ✅ NEW
-      { name: "Configurator", path: "/products/configurator", icon: Settings2 },          // ✅ NEW
-      { name: "Templator", path: "/products/templator", icon: LayoutTemplate },           // ✅ NEW
+      { name: "Extractor", path: "/products/extractor", icon: Database },
+      { name: "Configurator", path: "/products/configurator", icon: Settings2 },
+      { name: "Templator", path: "/products/templator", icon: LayoutTemplate },
     ],
   },
- 
+
   {
     name: "Projects",
     path: "/projects",
@@ -65,7 +72,6 @@ const navLinks: NavItem[] = [
       { name: "Code Re-vamp", path: "/projects/code-revamp", icon: Factory },
     ],
   },
- 
  
   {
     name: "Solutions",
@@ -86,6 +92,7 @@ const navLinks: NavItem[] = [
 ];
  
 export const Navigation = () => {
+  const { user } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -134,16 +141,25 @@ export const Navigation = () => {
     const timeout = setTimeout(() => setOpenDropdown(null), 250);
     setHoverTimeout(timeout);
   };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
  
   return (
     <motion.nav
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 ${isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 ${
+        isScrolled
           ? "bg-black/95 shadow-[0_5px_30px_rgba(233,92,42,0.3)] border-[#e95c2a]/50"
           : "bg-black/80 border-[#e95c2a]/30"
-        }`}
+      }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* LOGO */}
@@ -186,22 +202,57 @@ export const Navigation = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   {link.submenu.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
-                                 text-white transition-all duration-200 hover:bg-[#e95c2a]/10
-                                 hover:text-[#e95c2a] hover:translate-x-1
-                                 hover:shadow-[0_0_10px_rgba(233,92,42,0.3)]"
-                    >
-                      <item.icon size={16} className="text-[#e95c2a]" />
-                      {item.name}
-                    </Link>
+                    // Use ProtectedProductLink only for Products submenu
+                    link.name === "Products" ? (
+                      <ProtectedProductLink
+                        key={item.path}
+                        to={item.path}
+                        className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
+                                   text-white transition-all duration-200 hover:bg-[#e95c2a]/10
+                                   hover:text-[#e95c2a] hover:translate-x-1
+                                   hover:shadow-[0_0_10px_rgba(233,92,42,0.3)]"
+                      >
+                        <item.icon size={16} className="text-[#e95c2a]" />
+                        {item.name}
+                      </ProtectedProductLink>
+                    ) : (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
+                                   text-white transition-all duration-200 hover:bg-[#e95c2a]/10
+                                   hover:text-[#e95c2a] hover:translate-x-1
+                                   hover:shadow-[0_0_10px_rgba(233,92,42,0.3)]"
+                      >
+                        <item.icon size={16} className="text-[#e95c2a]" />
+                        {item.name}
+                      </Link>
+                    )
                   ))}
                 </motion.div>
               )}
             </div>
           ))}
+
+          {/* USER AUTH SECTION */}
+          {user ? (
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#e95c2a]/10 border border-[#e95c2a]/30">
+                <User size={16} className="text-[#e95c2a]" />
+                <span className="text-sm text-white/90">
+                  {user.displayName || user.email?.split('@')[0]}
+                </span>
+              </div>
+              <Button 
+                onClick={handleLogout}
+                className="bg-[#e95c2a]/20 hover:bg-[#e95c2a]/40 text-white border border-[#e95c2a]/50 transition-all"
+                size="sm"
+              >
+                <LogOut size={16} className="mr-2" />
+                Logout
+              </Button>
+            </div>
+          ) : null}
         </div>
  
         {/* MOBILE MENU */}
